@@ -15,6 +15,7 @@ Rails.application.routes.draw do
 
   get '/users' => 'users#index', as: :user
 
+  #patch '/users/id' => 'users#update'
 
 resources :users do
   resources :posts do

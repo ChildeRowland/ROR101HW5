@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HW5 in the CRUD</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<h1>HW5</h1>
+
+<%= yield %>
+
+<div>
+	<ul>
+		<li>
+			<del>
+				Create a new Rails app with a User model and a Post model.
+			</del>
+		</li>
+		<li>
+			Use model-based forms to create a basic CRUD functionality (Create, Read, Update, Destroy) for both users and posts.
+		</li>
+		<li>
+			A user should be able to sign up, login, and edit their profile.
+		</li>
+		<li>
+			Posts should be able to be created, seen, updated, and deleted
+		</li>
+	</ul>
+</div>
+
+</body>
+</html>

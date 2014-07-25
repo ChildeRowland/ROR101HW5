@@ -3,7 +3,7 @@
 <h3>Edit User Page</h3>
 
 <div>
-	<%= form_for @user, html: {method: :patch} do |f| %>
+	<%= form_for(@user, method: :put) do |f| %>
 		<%= f.label :fname %>
 		<%= f.text_field :fname %><br>
 		<%= f.label :lname %>

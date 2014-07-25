@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+
+<h3>Posts Page</h3>
+
+<ul>
+	<% @post.reverse.each do |p| %>
+		<li>
+			<%= p.title %><br>
+			<%= p.body %><br>
+			<%= "Posted by, #{p.user.fname}" %>
+		</li>
+	<% end %>
+</ul>

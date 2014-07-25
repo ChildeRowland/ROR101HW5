@@ -8,6 +8,20 @@
 </head>
 <body>
 
+<div>
+	<ul>
+		<li>
+			<%= link_to "Home Index", home_path %>
+		</li>
+		<li>
+			<%= link_to "User Index", users_path %>
+		</li>
+		<li>
+			<%= link_to "All Posts", :all_posts %>
+		</li>
+	</ul>
+</div>
+
 <h1>HW5</h1>
 
 <%= yield %>
@@ -23,7 +37,9 @@
 			Use model-based forms to create a basic CRUD functionality (Create, Read, Update, Destroy) for both users and posts.
 		</li>
 		<li>
-			A user should be able to sign up, login, and edit their profile.
+			<del>
+				A user should be able to sign up, login, and edit their profile.
+			</del>
 		</li>
 		<li>
 			Posts should be able to be created, seen, updated, and deleted

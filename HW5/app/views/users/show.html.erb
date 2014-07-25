@@ -3,3 +3,11 @@
 <%= flash[:notice] if flash[:notice] %>
 
 <h3><%= "#{@user.fname}'s Page"%></h3>
+
+<div>
+	<%= link_to "Log Out", session_path, method: :delete %>
+</div>
+
+<div>
+	<%= link_to "Delete User", user_path(@user), method: :delete %>
+</div>

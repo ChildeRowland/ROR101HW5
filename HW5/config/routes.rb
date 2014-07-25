@@ -13,7 +13,15 @@ Rails.application.routes.draw do
 
   get '/' => 'home#index', as: :home
 
-  get '/users' => 'users#index', as: :user
+  # get '/users' => 'users#index', as: :user
+
+  get '/all_posts' => 'posts#all_posts', as: :all_posts
+
+  get 'users/:id/posts' => 'posts#user_posts'
+
+  post '/sessions/create'
+
+  delete '/sessions' => 'sessions#destroy'
 
   #patch '/users/id' => 'users#update'
 
@@ -21,6 +29,8 @@ resources :users do
   resources :posts do
   end
 end
+
+resources :sessions, only: ['create', 'destroy']
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products

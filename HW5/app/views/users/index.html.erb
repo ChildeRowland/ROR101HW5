@@ -2,4 +2,12 @@
 
 <h3>User Index Page</h3>
 
-<p>sign in</p>
+<div>
+	<ul>
+		<% @users.all.each do |u| %>
+		<li>
+			<%= "#{u.fname} #{u.lname} #{u.id}" %>
+		</li>
+		<% end %>
+	</ul>
+</div>

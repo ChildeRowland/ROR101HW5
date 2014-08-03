@@ -19,10 +19,10 @@ class PostsController < ApplicationController
 		@post = @user.posts.new(post_params)
 		if @post.save
 			flash[:notice] = "New Post Added"
-			redirect_to user_path @user
+			redirect_to user_posts_path
 		else
 			flash[:notice] = "Post not added"
-			redirect_to user_path @user
+			redirect_to :back
 		end
 	end
 

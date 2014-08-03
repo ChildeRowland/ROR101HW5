@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+
+<h3><%= "Edit Post by #{@user.fname}" %></h3>
+
+<%= form_for([@user, @post], method: :patch) do |f| %>
+	<%= f.label :title %>
+	<%= f.text_area :title %>
+	<%= f.label :body %>
+	<%= f.text_area :body %>
+	<%= f.submit :Update! %>
+<% end %>
+

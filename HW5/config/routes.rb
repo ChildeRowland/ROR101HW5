@@ -13,23 +13,12 @@ Rails.application.routes.draw do
 
   get '/' => 'home#index', as: :home
 
-  # get '/users' => 'users#index', as: :user
-
-  get '/all_posts' => 'posts#all_posts', as: :all_posts
-
-  get 'users/:id/posts' => 'posts#user_posts'
-
-  post 'user/:id/posts' => 'posts#create'
-
   post '/sessions/create'
 
   delete '/sessions' => 'sessions#destroy'
 
-  #patch '/users/id' => 'users#update'
-
 resources :users do
-  resources :posts do
-  end
+  resources :posts
 end
 
 resources :sessions, only: ['create', 'destroy']

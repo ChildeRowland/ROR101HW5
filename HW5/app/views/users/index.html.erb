@@ -6,7 +6,8 @@
 	<ul>
 		<% @users.all.each do |u| %>
 		<li>
-			<%= "#{u.fname} #{u.lname} #{u.id}" %>
+			<%= "#{u.fname} #{u.lname} #{u.id}" %><br>
+			<%= link_to "this user's page", user_path(u.id) %>
 		</li>
 		<% end %>
 	</ul>

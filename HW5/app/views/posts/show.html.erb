@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+
+<h3><%= "#{@user.fname}'s Post number #{@post.id}" %></h3>
+
+<div>
+	<p>
+		<%= @post.title %><br>
+		<%= @post.body %>
+	</p>
+</div>
+
+<%= link_to "delete this post", user_post_path, method: :delete %>
